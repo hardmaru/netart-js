@@ -18,7 +18,6 @@ MIT
 
 # Gallery
 
-![Example](https://cdn.rawgit.com/hardmaru/netart-js/master/examples/netart1.jpeg)
 ![Example](https://cdn.rawgit.com/hardmaru/netart-js/master/examples/netart3.jpeg)
 ![Example](https://cdn.rawgit.com/hardmaru/netart-js/master/examples/netart4.jpeg)
 ![Example](https://cdn.rawgit.com/hardmaru/netart-js/master/examples/netart5.jpeg)
