@@ -1,0 +1,140 @@
+<html>
+<head>
+  <title>Interactive Neural Network Art</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=240, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="ōtoro.net">
+    <meta name="author" content="hardmaru">
+
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- roboto font -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+
+
+    <!-- jQquery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- extra styles -->
+    <style>
+    head, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-weight: 100;
+      font-size: 1em;
+    }
+    select {
+      width: 100px;
+      font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-weight: 100;
+      font-size: 1em;
+    }
+    p {
+      font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-weight: 100;
+      font-size: 1.5em;
+    }
+    a {
+      font-size: 1.0em;
+      color: #000;
+    }
+    textarea {
+      padding: 5;
+      font-family: "Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-weight: 100;
+      font-size: 0.5em;
+    }
+
+    .btn {
+      margin: 0.25em;
+      width: 66;
+    }
+
+    </style>
+
+    </head>
+    <body>
+
+    <div class="row" style="margin:0.5em; padding: 0.5em;">
+    <div class="col-sm-12 text-center">
+
+    <div class="panel panel-default">
+
+      <div class="panel-heading text-left"><h4><a target="_blank" href="http://blog.otoro.net/2016/04/24/interactive-abstract-pattern-generation-javascript-demo/">Interactive Neural Network Art</a></h4></div>
+
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-5 text-left">
+            <h6 id="displayNetworkSize">Network Size = 8</h6>
+            <div id="sliderNetworkSize"></div>
+            <h6 id="displayNetworkDepth">Network Depth = 4</h6>
+            <div id="sliderNetworkDepth"></div>
+
+            <h6 id="displayResolution">Resolution = 320</h6>
+            <div id="sliderResolution"></div>
+            <h6 id="displayZ1">Z1 = 0</h6>
+            <div id="sliderZ1"></div>
+            <h6 id="displayZ2">Z2 = 0</h6>
+            <div id="sliderZ2"></div><br/>
+
+            <center>
+            <form action="#">
+
+              <fieldset>
+                <h6 id="displayColorMode">Colour Mode</h6>
+                <select name="colorMode" id="colorMode">
+                  <option selected="selected">BW</option>
+                  <option>RGB</option>
+                  <option>CYMK</option>
+                  <option>HSV</option>
+                  <option>HSL</option>
+                </select>　
+                <select name="alphaMode" id="alphaMode">
+                  <option selected="selected">No Alpha</option>
+                  <option>Alpha</option>
+                </select>
+              </fieldset>
+            </form>
+            </center>
+
+            <div class="container-fluid text-center" id="buttons" style="margin:0.1em; padding: 0.1em">
+              <a class="btn btn-default btn-md" id = "reinit_button"> restart </a>
+              <a class="btn btn-default btn-md" id = "redraw_button"> redraw </a>
+              <a class="btn btn-default btn-md" id = "save_button"> save </a>
+            </div>
+
+          </div>
+
+          <div class="col-sm-7">
+            <canvas id="netart_canvas" style="margin:0.5em; padding: 0.5em;"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+    </div>
+
+    </body>
+
+
+  <!-- jQuery -->
+  <script src="lib/jquery-1.11.3.min.js"></script>
+  <script src="lib/jquery-ui.1.11.4.js"></script>
+
+  <script src="lib/bootstrap.3.2.0.min.js"></script>
+
+  <script src="lib/recurrent.js"></script>
+
+  <script src="lib/netart.js"></script>
+
+  <script src="netart-interactive.js"></script>
+
+</html>
